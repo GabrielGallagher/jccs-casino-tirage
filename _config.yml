@@ -9,7 +9,7 @@
 title: Tirage de la JCCS
 email: niclupien@gmail.com
 description: ""
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/tirage-jccs" # the subpath of your site, e.g. /blog
 url: "http://niclupien.github.io/tirage-jccs" # the base hostname & protocol for your site
 # Build settings
 markdown: kramdown
