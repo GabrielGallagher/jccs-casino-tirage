@@ -87,7 +87,6 @@ function refresh() {
 }
 
 $(function() {
-  // window.names = ['Nicolas', 'Josée', 'Naomie', 'Julie', 'Jean', 'Paul', 'Pierre'];
   window.names = [];
 
   refresh();
@@ -95,7 +94,7 @@ $(function() {
   $('#start').on('click', function () {
     $('#start').text('wait for it...');
     $('#start').blur();
-    animate(50, draw);
+    animate(25, draw);
   });
 
   $('#refresh').on('click', function() {
