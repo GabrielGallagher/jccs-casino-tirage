@@ -51,11 +51,12 @@ function draw() {
 
 function remove(e, arr) {
     var found = arr.indexOf(e);
+    arr.splice(found, 1);
 
-    while (found !== -1) {
-        arr.splice(found, 1);
-        found = arr.indexOf(e);
-    }
+    // while (found !== -1) {
+    //     arr.splice(found, 1);
+    //     found = arr.indexOf(e);
+    // }
 }
 
 function flattenEntries(entries) {
