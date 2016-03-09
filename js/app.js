@@ -44,7 +44,7 @@ function draw() {
   // show winner
   $('#winner').html(name);
   $('#winner').animateCss('bounce');
-  $('#start').text('Faites vos jeux');
+  $('#start').text('Rien ne va plus');
 
   // remove winner from names
   remove(name, window.names);
@@ -79,7 +79,7 @@ function refresh() {
   $('#winner').text('Tirage');
   var source = 'https://spreadsheets.google.com/feeds/list/1j5rYcIyj-RzXd8JekdXUuve65LlrlEb4ypQx6X4zxzM/od6/public/values?alt=json-in-script&callback=?';
 
-  $('#start').text('Loading names...');
+  $('#start').text('chargement ...');
 
   $.getJSON(source, function(data) {
     var entries = data.feed.entry.map(dataToEntry);
@@ -94,7 +94,7 @@ $(function() {
   refresh();
 
   $('#start').on('click', function () {
-    $('#start').text('rien ne va plus...');
+    $('#start').text('wait for it...');
     $('#start').blur();
     animate(25, draw);
   });
