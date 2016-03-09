@@ -68,7 +68,7 @@ function flattenEntries(entries) {
 
 function dataToEntry(raw) {
   return {
-    name: raw['gsx$nom']['$t'],
+    name: raw['gsx$prenom']['$t'] + ' ' + raw['gsx$nom']['$t'],
     chances: raw['gsx$chances']['$t']
   };
 }
