@@ -497,3 +497,12 @@ body {
     bottom: 15px;
     width: 100%;
 }
+
+
+.logo {
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 40px;
+    width: 100%;
+}
