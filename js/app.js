@@ -9,16 +9,17 @@ $.fn.extend({
 
 
 function animate(n, fn) {
+  var $el = $('#winner');
   var id = setInterval(function () {
     var i = Math.floor(Math.random()*window.names.length);
     var name = window.names[i];
-    $('#winner').html(name);
+    $el.html(name);
 
     if (--n <= 0) {
       clearInterval(id);
       fn();
     }
-  }, 150);
+  }, 100);
 }
 
 function draw() {
@@ -28,7 +29,7 @@ function draw() {
   if (!window.names || !window.names.length) {
     console.log('no names loaded');
     $('#winner').html('Aucune donnée');
-    $('#start').text('I\'m Feeling Lucky');
+    $('#start').text('Faites vos jeux');
     return;
   }
 
@@ -43,7 +44,7 @@ function draw() {
   // show winner
   $('#winner').html(name);
   $('#winner').animateCss('bounce');
-  $('#start').text('I\'m Feeling Lucky Again');
+  $('#start').text('Faites vos jeux');
 
   // remove winner from names
   remove(name, window.names);
@@ -83,7 +84,7 @@ function refresh() {
   $.getJSON(source, function(data) {
     var entries = data.feed.entry.map(dataToEntry);
     window.names = flattenEntries(entries);
-    $('#start').text('I\'m Feeling Lucky');
+    $('#start').text('Faites vos jeux');
   });
 }
 
@@ -93,7 +94,7 @@ $(function() {
   refresh();
 
   $('#start').on('click', function () {
-    $('#start').text('wait for it...');
+    $('#start').text('rien ne va plus...');
     $('#start').blur();
     animate(25, draw);
   });
