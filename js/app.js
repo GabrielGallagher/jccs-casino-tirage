@@ -94,7 +94,7 @@ $(function() {
   refresh();
 
   $('#start').on('click', function () {
-    $('#start').text('wait for it...');
+    $('#start').text('en cours...');
     $('#start').blur();
     animate(25, draw);
   });
