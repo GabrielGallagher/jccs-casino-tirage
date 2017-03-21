@@ -44,7 +44,7 @@ function draw() {
   // show winner
   $('#winner').html(name);
   $('#winner').animateCss('bounce');
-  $('#start').text('Rien ne va plus');
+  $('#start').text('Terminé');
 
   // remove winner from names
   remove(name, window.names);
